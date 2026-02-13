@@ -14,7 +14,7 @@ namespace Tarea1
             do
             {
                 Console.Clear();
-                Console.WriteLine("===== BLOQUE 3 =====");
+                Console.WriteLine("===== BLOQUE 3: ESTRUCTURAS DE CONTROL - CICLOS =====");
                 Console.WriteLine("15. Tabla de multiplicar");
                 Console.WriteLine("16. Primos en rango");
                 Console.WriteLine("17. Fibonacci");
@@ -47,6 +47,7 @@ namespace Tarea1
     {
         //pido al usuario que ingrese el numero que quiere conocer la tabla
         Console.Clear();
+        Console.WriteLine("\n---TABLA DE MULTIPLICAR EXTENDIDA---");
         Console.WriteLine("Ingrese Número: ");
         int numero = int.Parse(Console.ReadLine());
 
@@ -61,6 +62,7 @@ namespace Tarea1
         {
             //pedimos el inicio y el final del rango y luego calculamos los nuneros primos en ese rango
             Console.Clear();
+            Console.WriteLine("\n---NUMEROS PRIMOS EN RANGO---");
             Console.WriteLine("Inicio del rango: "); 
             int inicio = int.Parse(Console.ReadLine());
             Console.WriteLine("Fin del rango: "); 
@@ -91,6 +93,7 @@ namespace Tarea1
         {
             // pedir la cantidad de terminos y luego se suman los terminos y se muestra el promedio
             Console.Clear();
+            Console.WriteLine("\n---SERIE FIBONACCI---");
             Console.WriteLine("Ingrese la cantidad de terminos Fibonacci: ");
             int n = int.Parse(Console.ReadLine());
 
@@ -114,11 +117,12 @@ namespace Tarea1
         }
 
 
-        //18.Ejercicio de factoriales y convinaciones
+        //18.Ejercicio de factoriales y combinaciones
         static void Factorial()
         {
             //pedimos el numero al que le calularemos el factorial
             Console.Clear();
+            Console.WriteLine("\n---FACTORIAL--");
             Console.WriteLine("Número: ");
             int n = int.Parse(Console.ReadLine());
 
@@ -135,6 +139,7 @@ namespace Tarea1
         static void Juego()
         {
             Console.Clear();
+            Console.WriteLine("\n---JUEGO DE ADIVINANZA---");
             Random random = new Random(); // generador de números aleatorios
             int numeroGanador = random.Next(1, 101); // número que el jugador debe adivinar
             int n=0;
@@ -171,6 +176,7 @@ namespace Tarea1
        static void ValidarContraseña()
         {
             Console.Clear();
+            Console.WriteLine("\n---VALIDACION DE CONTRASEÑA---");
             string contraseña;
             bool contraseñaValida; //usamos bool para validad si es verdadero o falso
 
@@ -241,20 +247,22 @@ namespace Tarea1
         }
 
 
+     //21.Ejercicio patron de asteriscos
    static void PatrondeAsteriscos()
         {
             Console.Clear();
+            Console.WriteLine("\n---PATRON DE ASTERISCOS---");
             int op, n;
 
             // pedir tamaño del patrón
-            Console.Write("Tamaño del patrón: ");
+            Console.WriteLine("Tamaño del patrón: ");
             n = int.Parse(Console.ReadLine());
 
             // hacemos un menu para que el usuario elija el tipo de patron
             Console.WriteLine("1. Triángulo");
             Console.WriteLine("2. Triángulo invertido");
             Console.WriteLine("3. Cuadrado hueco");
-            Console.Write("Opción: ");
+            Console.WriteLine("Opción: ");
             op = int.Parse(Console.ReadLine());
 
             switch (op)
@@ -263,7 +271,7 @@ namespace Tarea1
                     for (int filas = 1; filas <= n; filas++)
                     {
                         for (int asteriscos = 1; asteriscos <= filas; asteriscos++)
-                            Console.Write("*");
+                            Console.WriteLine("*");
                         Console.WriteLine();
                     }
                     break;
@@ -272,7 +280,7 @@ namespace Tarea1
                     for (int filas = n; filas >= 1; filas--)
                     {
                         for (int asteriscos = 1; asteriscos <= filas; asteriscos++)
-                            Console.Write("*");
+                            Console.WriteLine("*");
                         Console.WriteLine();
                     }
                     break;
@@ -283,9 +291,9 @@ namespace Tarea1
                         for (int asteriscos = 1; asteriscos <= n; asteriscos++)
                         {
                             if (filas == 1 || filas == n || asteriscos == 1 || asteriscos == n)
-                                Console.Write("*");
+                                Console.WriteLine("*");
                             else
-                                Console.Write(" ");
+                                Console.WriteLine(" ");
                         }
                         Console.WriteLine();
                     }
@@ -295,94 +303,95 @@ namespace Tarea1
             Console.ReadKey();
         }
 
-
-static void CalculadoraconMenu()
-{
-    Console.Clear();
-    int op = 0;
-    double resultado = 0, segundoNumero; // resultado acumula resultados, segundoNumero es el número que ingresa el usuario
-    bool tieneResultado = false; // controla si ya se ingresó un número inicial
-
-    while (op != 8)
-    {
-        // Mostrar menú
-        Console.WriteLine("\n--- CALCULADORA ---");
-        Console.WriteLine("1. Sumar");
-        Console.WriteLine("2. Restar");
-        Console.WriteLine("3. Multiplicar");
-        Console.WriteLine("4. Dividir");
-        Console.WriteLine("5. Potencia");
-        Console.WriteLine("6. Raíz cuadrada");
-        Console.WriteLine("7. Porcentaje");
-        Console.WriteLine("8. Salir");
-        Console.Write("Opción: ");
-        op = int.Parse(Console.ReadLine());
-
-        if (op == 8) break; // salir del bucle
-
-        // Pedir número inicial si aún no lo tenemos
-        if (!tieneResultado)
+         //22.Ejercicio de Calculadora con menu
+        static void CalculadoraconMenu()
         {
-            Console.Write("Ingrese número: ");
-            resultado = double.Parse(Console.ReadLine());
-            tieneResultado = true;
-        }
+            Console.Clear();
+            Console.WriteLine("\n---CALCULADORA CON MENU---");
+            int op = 0;
+            double resultado = 0, segundoNumero; // resultado acumula resultados, segundoNumero es el número que ingresa el usuario
+            bool tieneResultado = false; // controla si ya se ingreso un número inicial
 
-        // Pedir segundo número solo si la operación lo necesita
-        if (op != 6) // la raíz cuadrada no necesita segundo número
-        {
-            Console.Write("Ingrese otro número: ");
-            segundoNumero = double.Parse(Console.ReadLine());
-        }
-        else
-        {
-            segundoNumero = 0; // aplica para raíz cuadrada
-        }
+            while (op != 8)
+            {
+                // Mostrar menú
+                Console.WriteLine("\n--- CALCULADORA ---");
+                Console.WriteLine("1. Sumar");
+                Console.WriteLine("2. Restar");
+                Console.WriteLine("3. Multiplicar");
+                Console.WriteLine("4. Dividir");
+                Console.WriteLine("5. Potencia");
+                Console.WriteLine("6. Raíz cuadrada");
+                Console.WriteLine("7. Porcentaje");
+                Console.WriteLine("8. Salir");
+                Console.Write("Opción: ");
+                op = int.Parse(Console.ReadLine());
 
-        // Ejecutar operación según la opción
-        switch (op)
-        {
-            case 1: // suma
-                resultado += segundoNumero;
-                break;
-            case 2: // resta
-                resultado -= segundoNumero;
-                break;
-            case 3: // multiplicación
-                resultado *= segundoNumero;
-                break;
-            case 4: // división
-                if (segundoNumero != 0)
-                    resultado /= segundoNumero;
+                if (op == 8) break; // salir del bucle
+
+                // Pedir número inicial si aún no lo tenemos
+                if (!tieneResultado)
+                {
+                    Console.Write("Ingrese número: ");
+                    resultado = double.Parse(Console.ReadLine());
+                    tieneResultado = true;
+                }
+
+                // Pedir segundo número solo si la operación lo necesita
+                if (op != 6) // la raíz cuadrada no necesita segundo número
+                {
+                    Console.WriteLine("Ingrese otro número: ");
+                    segundoNumero = double.Parse(Console.ReadLine());
+                }
                 else
-                    Console.WriteLine("Error: No se puede dividir entre cero.");
-                break;
-            case 5: // potencia
-                resultado = Math.Pow(resultado, segundoNumero);
-                break;
-            case 6: // raíz cuadrada
-                if (resultado >= 0)
-                    resultado = Math.Sqrt(resultado);
-                else
-                    Console.WriteLine("Error: No se puede calcular raíz de un número negativo.");
-                break;
-            case 7: // porcentaje
-                resultado = resultado * segundoNumero / 100;
-                break;
-            default:
-                Console.WriteLine("Opción inválida.");
-                break;
+                {
+                    segundoNumero = 0; // aplica para raíz cuadrada
+                }
+
+                // Ejecutar operación según la opción
+                switch (op)
+                {
+                    case 1: // suma
+                        resultado += segundoNumero;
+                        break;
+                    case 2: // resta
+                        resultado -= segundoNumero;
+                        break;
+                    case 3: // multiplicación
+                        resultado *= segundoNumero;
+                        break;
+                    case 4: // división
+                        if (segundoNumero != 0)
+                            resultado /= segundoNumero;
+                        else
+                            Console.WriteLine("Error: No se puede dividir entre cero.");
+                        break;
+                    case 5: // potencia
+                        resultado = Math.Pow(resultado, segundoNumero);
+                        break;
+                    case 6: // raíz cuadrada
+                        if (resultado >= 0)
+                            resultado = Math.Sqrt(resultado);
+                        else
+                            Console.WriteLine("Error: No se puede calcular raíz de un número negativo.");
+                        break;
+                    case 7: // porcentaje
+                        resultado = resultado * segundoNumero / 100;
+                        break;
+                    default:
+                        Console.WriteLine("Opción inválida.");
+                        break;
+                }
+
+                Console.WriteLine("Resultado actual: " + resultado);
+            }
+
+            Console.WriteLine("Calculadora finalizada.");
+            Console.ReadKey();
         }
 
-        Console.WriteLine("Resultado actual: " + resultado);
-    }
 
-    Console.WriteLine("Calculadora finalizada.");
-    Console.ReadKey();
-}
-
-
-}
+        }
 
 
 

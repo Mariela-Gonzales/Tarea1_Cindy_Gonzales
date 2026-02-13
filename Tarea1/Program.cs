@@ -15,7 +15,9 @@ class Program
             Console.WriteLine("1. Abrir Bloque 1");
             Console.WriteLine("2. Abrir Bloque 2");
             Console.WriteLine("3. Abrir Bloque 3");
-            Console.WriteLine("4. Salir");
+            Console.WriteLine("4. Abrir Bloque 4");
+            Console.WriteLine("5. Abrir Bloque 5");
+            Console.WriteLine("6. Salir");
             Console.WriteLine("Seleccione una opción: ");
 
             op = int.Parse(Console.ReadLine());
@@ -32,8 +34,13 @@ class Program
                 case 3:
                     Bloque3.Menu();
                     break;
-
                 case 4:
+                    Bloque4.Menu();
+                    break;
+                case 5:
+                    Bloque5.Menu();
+                    break;
+                case 6:
                     Console.WriteLine("Saliendo...");
                     break;
 

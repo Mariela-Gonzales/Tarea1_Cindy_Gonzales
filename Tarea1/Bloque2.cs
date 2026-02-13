@@ -14,7 +14,7 @@ namespace Tarea1
             do
             {
                 Console.Clear();
-                Console.WriteLine("===== BLOQUE 2 =====");
+                Console.WriteLine("===== BLOQUE 2 :ESTRUCTURAS DE CONTROL - CONDICIONALES=====");
                 Console.WriteLine("9. Clasificación de triángulos");
                 Console.WriteLine("10. Sistema de calificaciones UNAH");
                 Console.WriteLine("11. Calculadora de descuentos");
@@ -37,11 +37,11 @@ namespace Tarea1
             } while (op != 0);
         }
 
-        //Ejercicio Clasificacion de triangulos
+        //9. Ejercicio Clasificacion de triangulos
         static void Triangulo()
         {
-            //pedimos los datos de los triangulos
             Console.Clear();
+            Console.WriteLine("\n---CLASIFICACION DE TRIANGULOS ---");
             Console.WriteLine("Lado 1: "); 
             double lado1 = double.Parse(Console.ReadLine());
             Console.WriteLine("Lado 2: "); 
@@ -49,7 +49,6 @@ namespace Tarea1
             Console.WriteLine("Lado 3: "); 
             double lado3 = double.Parse(Console.ReadLine());
 
-            //comparamos los valores para definir el tipo de triangulo
             if (lado1 + lado2 <= lado3 || lado1 + lado3 <= lado2|| lado2 + lado3<= lado1)
                 Console.WriteLine("No es triángulo válido");
             else
@@ -65,15 +64,15 @@ namespace Tarea1
         }
         
 
-        //Ejercicio de calificaciones UNAH
+        //10. Ejercicio de calificaciones UNAH
         static void Calificaciones()
         {
             //pedimos las notas y las clasificamos en A,B,C,D y F
             Console.Clear();
+             Console.WriteLine("\n---SISTEMA DE CALIFICACIONES UNAH ---");
             Console.WriteLine("Ingrese nota (0-100): ");
             int nota = int.Parse(Console.ReadLine());
 
-            //usamos if para condicionar la clasificacion
             if (nota < 0 || nota > 100)
                 Console.WriteLine("Nota inválida");
             else if (nota >= 90) 
@@ -90,11 +89,11 @@ namespace Tarea1
             Console.ReadKey();
         }
 
-        //Ejercicio Calculadora de descuentos
+        //11. Ejercicio Calculadora de descuentos
         static void Descuento()
         {
-            //pedimos el monto de compra
             Console.Clear();
+            Console.WriteLine("\n---CALCULADORA DE DESCUENTOS---");
             Console.WriteLine("Monto compra: ");
             double monto = double.Parse(Console.ReadLine());
             double descuento = 0;
@@ -113,11 +112,13 @@ namespace Tarea1
         }
 
 
-        //Ejercicio año bisiesto y dias del mes
+        //12. Ejercicio año bisiesto y dias del mes
 
     static void Bisiesto()
     {
         //ingreso el año, y el mes en numero
+        Console.Clear();
+        Console.WriteLine("\n---AÑO BISIESTO Y DIAS DEL MES---");
         Console.WriteLine("Año: ");
         int año= int.Parse(Console.ReadLine());
 
@@ -155,10 +156,12 @@ namespace Tarea1
         Console.ReadKey();
     }
 
-        //Ejercicio validador de fecha
+        //13. Ejercicio validador de fecha
     static void Fecha()
     {
         //pedimos el dia, el mes y el año
+        Console.Clear();
+        Console.WriteLine("\n---VALIDADOR DE FECHA---");
         Console.WriteLine("Día: ");
         int dia = int.Parse(Console.ReadLine());
 
@@ -232,9 +235,11 @@ namespace Tarea1
 
     }
 
-        //Ejercicio Cajero automatico
+        //14. Ejercicio Cajero automatico
     static void Cajero()
     {
+        Console.Clear();
+        Console.WriteLine("\n---CAJERO AUTOMATICO---");
         int saldo = 10000; //inicializo con un saldo de 10000
 
         Console.Write("Monto a retirar: ");

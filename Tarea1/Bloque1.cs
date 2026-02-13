@@ -55,8 +55,8 @@ namespace Tarea1
         // 1.Ejercicio de la calculadora IMC
         static void IMC()
         {
-            //pedimos el peso y la altura usando valores doubles
             Console.Clear();
+            Console.WriteLine("\n---CALCULADORA IMC ---");
             Console.WriteLine("Peso (kg): ");
             double peso = double.Parse(Console.ReadLine());
 
@@ -85,9 +85,9 @@ namespace Tarea1
 
         // 2. Ejercicio de Conversión temperatura
         static void Temperatura()
-        {
-            //hacemos un pequeño menu 
+        { 
             Console.Clear();
+            Console.WriteLine("\n---CONVERSION DE TEMPERATURAS ---");
             Console.WriteLine("1. Celsius a Fahrenheit");
             Console.WriteLine("2. Fahrenheit a Celsius");
             Console.WriteLine("3. Celsius a Kelvin");
@@ -112,12 +112,11 @@ namespace Tarea1
         // 3.Ejercicio de Billetes
         static void Billetes()
         {
-            //pedimos el monto de lempiras
             Console.Clear();
+            Console.WriteLine("\n---DESGLOCE DE BILLETES ---");
             Console.WriteLine("Monto en Lempiras: ");
             int monto = int.Parse(Console.ReadLine());
 
-            //Creamos una lista de desgloce 
             int[] billetes = { 500, 100, 50, 20, 10, 5, 2, 1 };
 
             //calculamos el desgloce del monto 
@@ -136,6 +135,7 @@ namespace Tarea1
             //pedimos el monto del prestamo, lel porcentaje de la tasa anual de interes
             //  y la cantidad de meses 
             Console.Clear();
+            Console.WriteLine("\n---CALCULADORA DE PRESTAMO SIMPLE ---");
             Console.WriteLine("Monto: ");
             double monto = double.Parse(Console.ReadLine());
             Console.WriteLine("Tasa anual (%): ");
@@ -157,6 +157,7 @@ namespace Tarea1
         {
         //pedimos la primer cantidad de horas, minutos y segundos
             Console.Clear();
+            Console.WriteLine("\n---TIEMPO TRANSCURRIDO---");
             Console.WriteLine("Hora 1 (horas minutos segundos): ");
             int horas1 = int.Parse(Console.ReadLine());
             int minutos1 = int.Parse(Console.ReadLine());
@@ -191,6 +192,7 @@ namespace Tarea1
          static void AreaPerimetro()
 
     {
+        Console.WriteLine("\n---AREA Y PERIMETRO---");
         //creamos un menu ya que son varias areas y perimetros
         int opcion;
         do
@@ -326,8 +328,8 @@ namespace Tarea1
     // 7. Ejercicio de Almacenamiento
     static void Almacenamiento()
         {
-            //  pedimos la cantidad de Bytes
             Console.Clear();
+            Console.WriteLine("\n--CONVERSION DE UNIDADES DE ALMACENAMIENTO ---");
             Console.WriteLine("Bytes: ");
             double bytes = double.Parse(Console.ReadLine());
 
@@ -342,14 +344,13 @@ namespace Tarea1
         // 8. Ejercicio Salario semanal
         static void Salario()
         {
-            //pedimos al usuario la cantidad de horas trabajadas y la tarifa por hora
+    
             Console.Clear();
+            Console.WriteLine("\n---CALCULO DE SALARIO MENSUAL ---");
             Console.WriteLine ("Horas trabajadas: ");
             double horas = double.Parse(Console.ReadLine());
             Console.WriteLine ("Tarifa por hora: ");
             double tarifa = double.Parse(Console.ReadLine());
-
-        //inicializamos en 0
             double extra = 0;
             double subtotal=0;
 
